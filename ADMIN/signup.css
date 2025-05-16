@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    text-align: center;
+    font-size: 22px;
+    color: black;
+}
+
+.regform, .regformf {
+    width: 430px;
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#heading {
+    margin-top: 0;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+}
+
+form {
+    width: 400px;
+}
+
+.input input, .password input {
+    width: 100%;
+    font-size: 20px;
+    border: 0.5px solid #63707E;
+    border-radius: 6px;
+    padding: 14px 15px;
+    box-sizing: border-box;
+    margin: 5px 0 15px;
+    color: black;
+}
+
+input:focus {
+    background-color: white;
+}
+
+button {
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    border: 0.5px solid black;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    color: #eeeeee;
+    transform: scale(0.98);
+}
+
+.radio .value {
+    padding: 10px 0;
+}
+
+.radio input {
+    transform: scale(1.5);
+}
+
+.password {
+    position: relative;
+}
+
+.uil, .bi, .fa-eye-slash {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    color: #595757;
+    font-size: 23px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.image-radio-group input[type="radio"] {
+    display: none;
+}
+
+.image-radio-group label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.image-radio-group label img {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.image-radio-group input[type="radio"]:checked + label img {
+    border-color: rgb(46, 44, 44);
+    border-radius: 10px;
+}
+
+.image-radio-group img {
+    width: 215px;
+    display: block;
+    margin: auto;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #d93025;
+}
+
+h1 {
+    font-size: 29px;
+}
+
+@media (max-width: 767px) {
+    .regform, .regformf {
+        width: 300px;
+        font-size: 15px;
+        margin: 40px auto;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    #heading {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .input input {
+        font-size: 16px;
+    }
+
+    .radio input {
+        transform: scale(1.1);
+    }
+
+    .image-radio-group img {
+        width: 300px;
+    }
+}

@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+   
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+ 
+    .nav-container .links{
+        display: none;
+    }
+  
+    
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    transition: width 0.3s ease;
+}
+
+.sidebar.shrink {
+    width: 70px; /* Shrink the sidebar */
+}
+
+.sidebar .logo-name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar .menu-items {
+    margin-top: 20px;
+}
+
+.sidebar .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-links li {
+    margin-bottom: 15px;
+}
+
+.sidebar .nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-links li a i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.sidebar .nav-links li a .link-name {
+    font-size: 16px;
+}
+
+.sidebar.shrink .nav-links li a .link-name {
+    display: none; /* Hide text in links when sidebar is shrunk */
+}
+
+.sidebar-toggle {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: -50px; /* Position hamburger icon to the right of sidebar */
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    right: -50px; /* Position hamburger icon to the right of sidebar */
+    transform: translateY(-50%);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    
+}
+
+.menu-items .logout-mode{
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+.menu-items .mode{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.menu-items .mode-toggle{
+    position: absolute;
+    right: 14px;
+    height: 50px;
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.mode-toggle .switch{
+    position: relative;
+    display: inline-block;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+}
+.switch:before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: 15px;
+    background-color: var(--panel-color);
+    border-radius: 50%;
+    transition: var(--tran-03);
+}
+body.dark .switch:before{
+    left: 20px;
+}
+
+/* Responsive for Sidebar and Top Navbar */
+@media screen and (max-width: 768px) {
+    .top-nav-container .top-nav-links {
+        display: none;
+    }
+
+    .sidebar {
+        left: 0;
+        top: 0;
+        width: 250px;
+    }
+
+    .sidebar.shrink {
+        width: 70px;
+    }
+}
+
+/* Centering the Table and Form */
+main.table {
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0; /* Ensure margin-top is set to 0 */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    
+}
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #5a3d2b; /* Dark brownish color for contrast */
+    margin-bottom: 10px;
+   /* Soft gradient background */
+    padding: 1px 2px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: 10px;
+ 
+}
+/* Table Styling */
+.table__body {
+    width: 70%;
+    overflow-x: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 300px auto; /* Centers horizontally and adds bottom margin */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for movement */
+    display: flex;
+   margin-left: 350px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th {
+    background: #f4f4f4;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* Search Bar */
+.Student {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Student input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.Student img {
+    width: 20px;
+    margin-left: -30px;
+    cursor: pointer;
+}
+
+/* Dropdown Fields */
+.input-field {
+    margin-bottom: 15px;
+    width: 80%;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left; /* Align text to the left */
+}
+
+/* Dropdown Fields */
+.input-field select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="none" stroke="black" stroke-width=".5" d="M2 0L0 2h4z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+/* Form Label */
+.form-label {
+    font-weight: bold;
+    text-align: left;
+}
+
+
+/* Buttons */
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition for background and transform */
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.edit-btn {
+    background: #28a745;
+}
+
+.edit-btn:hover {
+    background: #218838;
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+
+
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allows elements to wrap if needed */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Aligns items vertically */
+    gap: 20px;
+    max-width: 900px;
+    margin: auto; /* Center form horizontally */
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 420px;
+}
+
+
+.input-field, .Student {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.input-field input, .input-field select, .Student input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+}
+
+.Search {
+    justify-self: center;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.Search:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table__body {
+        width: 100%;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .Student {
+        flex-direction: column;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .Search {
+        width: 100%;
+    }
+}
