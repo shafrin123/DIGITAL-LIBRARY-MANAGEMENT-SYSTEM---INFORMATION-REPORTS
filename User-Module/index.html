@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Hive</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+
+    <header>
+        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Book Hive</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="#main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="#about"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="#services" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Services</a>
+            
+            
+        </div>
+    </header>
+
+    <section class="main" id="main">
+        <div class="content">
+            <h2 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">Hello, <br><span>Welcome to</span></h2>
+            <div class="animated-text" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">
+                <h3>Department of </h3>
+                <h3>Computer Science</h3>
+                <h3>Book Hive</h3>
+            </div>
+            <a href="UserLogin.php" class="btn" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="1000">Login</a>
+           
+        </div>
+    </section>
+
+<!--  About Section -->
+
+    <section class="about" id="about">
+        <div class="title reveal">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About me</h2>
+        </div>
+        <div class="content">
+            <div class="column col-left reveal">
+                <div class="img-card" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="200">
+                    <img src="about.png" alt="">
+                </div>
+            </div>
+            <div class="column col-right reveal">
+                <h2 class="content-title" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Welcome to PG Department of Computer Science</h2>
+                <p class="paragraph-text" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">The Department of Computer Science came into existence from the academic year  <span>2012-13 and is offering B.Sc., and M.Sc.,Computer Science Programmes.</span> Our department  is committed to providing high-quality education in computer science, fostering innovation,  and preparing students for successful careers in the field of technology.<br>At Rajeswari Vedachalam Govt. Arts College, Chengalpattu, our focus is on nurturing the next generation  of computer scientists and empowering them to make meaningful contributions to society</p>
+          
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+
+    <section class="services" id="services">
+        <div class="title">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">My Services</h2>
+           
+        </div>
+        <div class="content">
+            <div class="card" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="info">
+                    <h3>PRE-BOOKING</h3>
+                    <p>Book Hive for User offers a pre-booking service, allowing  students to reserve books in advance. It's designed to enhance the library experience by providing users with the convenience of reserving books ahead of time. </p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="info">
+                    <h3>LIBRARY INFORMATION</h3>
+                    <p>Access general library details through our library information module. Get information about library timings, available resources, and more, all in one place.</p>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="info">
+                    <h3>BOOK CATEGORIES</h3>
+                    <p>Organize books by categories with our book categories module. Easily browse through different topics to find the books you're interested in.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+      <footer class="footer">
+        <span class="footer-title">Jacob Stevens</span>
+        <p>Copyright @2021 <a href="#">Coding Zakir</a>. All Rights Reserved.</p>
+      </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelector(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>

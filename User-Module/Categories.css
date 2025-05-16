@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    background-image: url('Lib\ \(2\).jpg');
+    background-size: cover;
+    background-position: center;
+}
+.header{
+  z-index: 889;
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+header.sticky{
+  background-color: #0a0a0a;
+  padding: 10px 200px;
+}
+
+header .brand{
+  color: white;
+  font-size: 1.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 20%;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation a{
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+header .navigation a:hover{
+  color: #3a6cf4;
+}
+
+header .sticky .navigation a:hover{
+  color: black;
+}
+
+section{
+  padding: 100px 200px;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    color: red;
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.logo {
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px;
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transform: 0.3s linear;
+}
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(109,67, 0);
+    transition: 0.2s linear;
+}
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+@media (max-width:884px) {
+    body{
+        overflow-y: visible;
+    }
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-container .links{
+        display: none;
+    }
+  
+    .main-container .content{
+        width: 80%;
+    }
+
+    .main-container .image{
+        width: 80%;
+        margin-bottom: 0px;
+    }
+}
+
+
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px;
+   
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 150px;
+  }
+  
+  .container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color:white ;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+  }
+  
+  .category {
+    background:aliceblue;
+    backdrop-filter: blur(9px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(166, 47, 47, 0.15);
+  }
+  
+  .category h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(109,67, 0) ;
+    padding-bottom: 5px;
+  }
+  
+  .category p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: white;
+    transition: color 0.2s ease;
+  }
+  
+  .category p:hover {
+    color:whitesmoke;
+  }
+  
+  .category p::before {
+    content: "• ";
+    color:white ;
+    font-weight: bold;
+  }
+  
+  .category a {
+    text-decoration: none;
+    color: White(209, 152, 152);
+    transition: color 0.3s ease;
+  }
+  
+  .category a:hover {
+    text-decoration: underline;
+    color: black;
+  }

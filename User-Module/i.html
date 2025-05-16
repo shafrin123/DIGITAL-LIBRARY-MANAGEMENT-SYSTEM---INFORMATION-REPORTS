@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Portfolio-Procoder09</title>
+    <link rel="stylesheet" href="MAIN.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+
+
+    <header>
+        <a href="" class="brand" data-aos="zoom-in" data-aos-duration="1000">Adam</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <a href="#main" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Home</a>
+            <a href="#about"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">About</a>
+            <a href="#services" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Services</a>
+            
+            
+        </div>
+    </header>
+    <section class="contact" id="contact">
+        <div class="title reveal">
+          <h2 class="section-title">Contact Me</h2>
+        </div>
+        <div class="content">
+          <div class="row">
+            <div class="card reveal">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info">
+                <h3>Address</h3>
+                <span>Rajeswari Vedachalam Government Arts College,</span><br>
+                <span>Department of Computer Science</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="info">
+                <h3>Phone</h3>
+                <span>1234567890</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info">
+                <h3>Email Address</h3>
+                <span>contact@email.com</span>
+              </div>
+            </div>
+            <div class="card reveal">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="info">
+                <h3>Website</h3>
+                <span>Book Hive.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="contact-form reveal">
+              <h3>Send Message</h3>
+              <div class="input-box">
+                <input type="text" name="" value="" placeholder="Name">
+              </div>
+              <div class="input-box">
+                <input type="text" name="" value="" placeholder="Email">
+              </div>
+              <div class="input-box">
+                <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
+              </div>
+              <div class="input-box">
+                <input type="submit" class="send-btn" name="" value="Send">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+
+
+
+
+    
+
+
+    
+      <footer class="footer">
+        <span class="footer-title">Jacob Stevens</span>
+        <p>Copyright @2021 <a href="#">Coding Zakir</a>. All Rights Reserved.</p>
+      </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script>
+
+        window.addEventListener("scroll", function(){
+    scrollBtn.classList.toggle("active", window.scrollY > 500);
+});
+
+//javascript for scroll back to top on click scroll-to-top button
+
+// document.querySelector(".scrollToTop-btn").addEventListener("click", () => {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// });
+
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+        const navigationItems = document.querySelector(".navigation a");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        })
+
+        // Navigation Effects
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+
+        navigationItems.forEach((navigationItem) => {
+            navigationItem.addEventListener("click", () => {
+                menuBtn.classList.remove("active");
+                navigation.classList.remove("active")
+            })
+        })
+
+
+
+    </script>
+</body>
+</html>

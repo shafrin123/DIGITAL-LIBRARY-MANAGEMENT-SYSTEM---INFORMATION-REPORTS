@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+   
+    background-image: url('Lib\ \(2\).jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+ /* Basic table styling */
+ .table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders between cells are merged */
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background: transparent;
+    backdrop-filter: blur(9px);
+}
+
+/* Table header styling */
+.table th {
+    background-color: #84919f; /* Blue background for headers */
+    color: white; /* White text for headers */
+    padding: 12px;
+    border: 1px solid #0e0e0e;
+}
+
+/* Table row styling */
+.table td {
+    padding: 12px;
+    border: 1px solid #0e0e0e;
+}
+
+/* Zebra striping for rows */
+.table tr:nth-child(even) {
+    background-color:linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+}
+
+/* Hover effect for rows */
+.table tr:hover {
+    background-color:linear-gradient(to right, rgb(255,255,255), rgb(254,215,173)); 
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    }
+}
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+ margin-top: 200px;
+ background: transparent;
+ backdrop-filter: blur(9px);
+ 
+}
+
+form label {
+    font-weight: bold;
+
+}
+
+form input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color:rgb(109,67,0);
+    color: white;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color:rgb(109,67,0);
+}
+
+/* Centering the form and table */
+.activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+ 
+    
+    
+    
+ 
+}
+
+.location {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.location header {
+    font-size: 24px;
+    font-weight: bold;
+    
+    margin-bottom: 20px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.styled-table, .styled-table1 {
+    width: 85%; /* Increased width */
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.styled-table th, .styled-table1 th, .styled-table td, .styled-table1 td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.styled-table th, .styled-table1 th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.styled-table tr:nth-child(even), .styled-table1 tr:nth-child(even) {
+    background-color: #5eaccd;
+}

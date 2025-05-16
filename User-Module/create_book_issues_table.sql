@@ -1,0 +1,21 @@
+CREATE TABLE `book_issues` (
+    `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+    `access_no` varchar(50) NOT NULL COMMENT 'Book Accession Number',
+    `book_name` varchar(255) NOT NULL COMMENT 'Book Name',
+    `author_name` varchar(255) NOT NULL COMMENT 'Book Author',
+    `receiver` enum('student', 'staff') NOT NULL COMMENT 'Receiver Type',
+    `student_name` varchar(255) DEFAULT NULL COMMENT 'Student Name (if applicable)',
+    `class` enum('ug', 'pg') DEFAULT NULL COMMENT 'Class (if applicable)',
+    `year` enum('1st', '2nd', '3rd') DEFAULT NULL COMMENT 'Year (if applicable)',
+    `student_id` varchar(50) DEFAULT NULL COMMENT 'Student ID (if applicable)',
+    `contact` varchar(20) DEFAULT NULL COMMENT 'Student Contact (if applicable)',
+    `staff_name` varchar(255) DEFAULT NULL COMMENT 'Staff Name (if applicable)',
+    `department` varchar(255) DEFAULT NULL COMMENT 'Staff Department (if applicable)',
+    `issued_date` date NOT NULL COMMENT 'Issued Date',
+    `due_date` date NOT NULL COMMENT 'Due Date',
+    `return_date` date DEFAULT NULL COMMENT 'Return Date',
+    `status` enum('issued', 'returned') NOT NULL DEFAULT 'issued' COMMENT 'Book Status',
+    `fine_amount` decimal(10, 5) NOT NULL COMMENT 'Fine amount',
+    PRIMARY KEY (`id`),
+    KEY `book_issues_ibfk_2` (`access_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Table for tracking book issues';
